@@ -8,14 +8,17 @@ export class BadgeList extends LitElement{
 
     static get properties(){
         return{
-            badges: {type: Array}
+            schoolBadges: {type: Array}
         }
     }
 
-
+    constructor(){
+        this.schoolBadges = [];
+        this.updateBadges; 
+    }
 
     updateBadges(){
-        const address = new URL('./api/badges.js', import.meta.url).href;
+        const address = '/api/badges';
         fetch(address).then((response) => {
             if(response.ok){
                 return response.json() 
@@ -26,7 +29,6 @@ export class BadgeList extends LitElement{
             this.badges = data;
         }); 
         console.log(data); 
-        
     }
 
     static get styles(){
@@ -44,7 +46,7 @@ export class BadgeList extends LitElement{
     render(){
         return html`
        <div class="wrapper">
-        ${this.badges.map(badge => html`
+        ${this.schoolBadges.map(badge => html`
          <div class="item">
           <badge-card fieldName="${this.fieldName}" title="${this.title}"
           creatorName=${this.creatorName}></badge-card>
