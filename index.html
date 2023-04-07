@@ -42,7 +42,7 @@
       background-color: #F7FAFC;
       border: 2px;
       border-radius: 5px;
-      display: flex;
+      display: block;
       flex-direction: column;
       
     }
@@ -58,6 +58,7 @@
       align-items: baseline;
       display: flex;
       flex-grow: 1;
+      ;
     }
  
     
@@ -67,7 +68,6 @@
   </head>
 
   <body>
-    <badge-list></badge-list>
     <header>
       <h3>Explore</h3>
     </header>
@@ -84,15 +84,12 @@
           <p>Looking for something brand spaking new? Here are the most recently added badges </p>
         </div>
         <hr class="solid">
-        <div class="badge-ren">
-          <badge-card></badge-card>
-          <badge-card></badge-card>
-        </div>
+        <badge-list></badge-list>
       </div>
     </main>
     <script type="module">
       import "./src/badge-card.js"; 
-      import "./src/badge-list.js"; 
+      import "./src/badge-list.js";
     </script> 
 
   </body>

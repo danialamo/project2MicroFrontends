@@ -33,7 +33,7 @@ export class BadgeCard extends LitElement{
             margin: 100px;
             border-radius: 3px;
             border-left: 0.8rem solid #58AEE9;
-            width: 280px; 
+            width: 250px; 
             height: 120px; 
             background-color: #F7FAFC; 
             outline: 0.5px solid #58AEE9;

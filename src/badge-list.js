@@ -13,32 +13,33 @@ export class BadgeList extends LitElement{
     }
 
     constructor(){
-        this.schoolBadges = [];
+        super(); 
+        this.schoolBadges = [{
+            "fieldName" : "Technology & Information",
+             "title" : "APA Style: Introduction",
+             "creatorName" : "Victoria Raish"
+         },
+         {
+             "fieldName" : "Technology & Information",
+              "title" : "APA Style: Introduction",
+              "creatorName" : "Victoria Raish"
+          }];
         this.updateBadges; 
-    }
-
-    updateBadges(){
-        const address = '/api/badges';
-        fetch(address).then((response) => {
-            if(response.ok){
-                return response.json() 
-            }
-            return [];
-        })
-        .then((data) => {
-            this.badges = data;
-        }); 
-        console.log(data); 
     }
 
     static get styles(){
         return css`
         .wrapper{
-            outline: outline: 0.5px solid #58AEE9;
             display: flex; 
+            align-items: center;
+            width: 900px; 
+            height: 200px;
+
         }
         .item{
             display: inline-flex; 
+            height: 120px; 
+            width: 250px;
         }
         `
     }
