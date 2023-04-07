@@ -69,7 +69,7 @@ export class BadgeCard extends LitElement{
             padding: 6px;
           }
           .image{
-            height 40px; 
+            height: 40px; 
             width: 40px; 
           }
        
