@@ -13,9 +13,6 @@ export class BadgeCard extends LitElement{
         creatorName: {
             type: String,
         },
-        symbolImg: {
-            type: String,
-        }
        }
 
     }
