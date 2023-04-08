@@ -1,17 +1,22 @@
 [
-{
-   "fieldName" : "Technology & Information",
-    "title" : "APA Style: Introduction",
-    "creatorName" : "Victoria Raish"
-},
-{
-    "fieldName" : "Technology & Information",
-     "title" : "APA Style: Introduction",
-     "creatorName" : "Victoria Raish"
- },
- {
-    "fieldName" : "Technology & Information",
-     "title" : "APA Style: Introduction",
-     "creatorName" : "Victoria Raish"
- }
+     {
+         "fieldName" : "Technology & Information",
+          "title" : "APA Style: Citations Introduction",
+          "creatorName" : "Victoria Raish"
+      },
+      {
+         "fieldName" : "Technology & Information",
+          "title" : "Savvy Searcher: Recognizing Bias",
+          "creatorName" : "Victoria Raish"
+      },
+      {
+        "fieldName" : "Technology & Information",
+         "title" : "Savvy Searcher: Recognizing Bias",
+         "creatorName" : "Victoria Raish"
+      }, 
+      {
+        "fieldName" : "Technology & Information",
+         "title" : "Savvy Searcher: Recognizing Bias",
+         "creatorName" : "Victoria Raish"
+      }
 ]

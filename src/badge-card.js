@@ -19,9 +19,9 @@ export class BadgeCard extends LitElement{
 
     constructor(){
         super(); 
-        this.fieldName = "Technology & Information";
-        this.title = "APA Style: Introduction"; 
-        this.creatorName = "Victoria Raish";
+        this.fieldName = "";
+        this.title = ""; 
+        this.creatorName = "";
     }
 
     static get styles(){

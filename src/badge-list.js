@@ -14,27 +14,23 @@ export class BadgeList extends LitElement{
 
     constructor(){
         super(); 
-        this.schoolBadges = [{
-            "fieldName" : "Technology & Information",
-             "title" : "IST Careers- Meet a Coach- level 2",
-             "creatorName" : "Victoria Raish"
-         },
-         {
-             "fieldName" : "Technology & Information",
-              "title" : "APA Style: Citations Introduction",
-              "creatorName" : "Victoria Raish"
-          },
-          {
-             "fieldName" : "Technology & Information",
-              "title" : "Savvy Searcher: Recognizing Bias",
-              "creatorName" : "Victoria Raish"
-          },
-          {
-            "fieldName" : "Technology & Information",
-             "title" : "Savvy Searcher: Recognizing Bias",
-             "creatorName" : "Victoria Raish"
-          } ];
-        this.updateBadges; 
+        this.schoolBadges = [];
+        this.updateBadges(); 
+    }
+
+    updateBadges(){
+        const address = '../api/Badge'
+        const data =  fetch(address).then((response) => {
+            if(response.ok){
+                return response.json() 
+            }
+            return [];
+        })
+        .then((data) => {
+            this.schoolBadges = data;
+        }); 
+        console.log(data); 
+
     }
 
     static get styles(){
