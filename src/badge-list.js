@@ -16,14 +16,24 @@ export class BadgeList extends LitElement{
         super(); 
         this.schoolBadges = [{
             "fieldName" : "Technology & Information",
-             "title" : "APA Style: Introduction",
+             "title" : "IST Careers- Meet a Coach- level 2",
              "creatorName" : "Victoria Raish"
          },
          {
              "fieldName" : "Technology & Information",
-              "title" : "APA Style: Introduction",
+              "title" : "APA Style: Citations Introduction",
               "creatorName" : "Victoria Raish"
-          }];
+          },
+          {
+             "fieldName" : "Technology & Information",
+              "title" : "Savvy Searcher: Recognizing Bias",
+              "creatorName" : "Victoria Raish"
+          },
+          {
+            "fieldName" : "Technology & Information",
+             "title" : "Savvy Searcher: Recognizing Bias",
+             "creatorName" : "Victoria Raish"
+          } ];
         this.updateBadges; 
     }
 
@@ -31,9 +41,11 @@ export class BadgeList extends LitElement{
         return css`
         .wrapper{
             display: flex; 
-            align-items: center;
-            width: 900px; 
+            align-items: first baseline;
+            width: 1000px; 
             height: 200px;
+            justify-content: space-between; 
+            padding-left: 10px; 
 
         }
         .item{
@@ -45,18 +57,14 @@ export class BadgeList extends LitElement{
     }
 
     render(){
-        return html`
-       <div class="wrapper">
-        ${this.schoolBadges.map(badge => html`
-         <div class="item">
-          <badge-card fieldName="${this.fieldName}" title="${this.title}"
-          creatorName=${this.creatorName}></badge-card>
-        </div>
-        `)}
-        </div>
-       `;
-
-
+      return html`
+      <div class= "wrapper">
+       ${this.schoolBadges.map(badges => html`
+       <div class="item">
+         <badge-card fieldName="${badges.fieldName}" title="${badges.title}" creatorName="${badges.creatorName}"></badge-card>
+       </div>
+       `)}
+      `
     }
 }
 customElements.define(BadgeList.tag, BadgeList);

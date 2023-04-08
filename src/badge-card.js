@@ -30,48 +30,45 @@ export class BadgeCard extends LitElement{
     static get styles(){
         return css`
         .wrapper{
-            margin: 100px;
             border-radius: 3px;
             border-left: 0.8rem solid #58AEE9;
-            width: 250px; 
-            height: 120px; 
+            width: 230px; 
+            height: 140px; 
             background-color: #F7FAFC; 
             outline: 0.5px solid #58AEE9;
             
           }
           .field{
-            text-align: left; 
-            width: 280px; 
+            text-align:left; 
+            width: 230px; 
             height: 30px; 
             background-color: lightblue;
           }
             
           }
           .content{
-            width: 100px; 
-            height: 70px; 
-            text-align: left;
-            padding: 6px; 
+            text-align:left; 
+            display: block; 
+
           }
           
-          .fieldtxt{
-            padding: 6px;
-            
-          }
           p{
-            font-size: 13.5px;
+            font-size: 12.5px;
           }
+
+          .fieldtxt{
+            padding-top: 5px; 
+            padding-left: 4px;
+          } 
+          
           .creator{
-            padding-bottom: 5px;
-            padding-left: 6px; 
+            padding-left: 4px;
           }
+
           h3{
-            padding: 6px;
+            padding-left: 4px;
           }
-          .image{
-            height: 40px; 
-            width: 40px; 
-          }
+
        
         `
     }
@@ -84,12 +81,10 @@ export class BadgeCard extends LitElement{
           </div>
           <div class="content">
             <h3>${this.title}</h3>
-            <p class="creator">Creator: ${this.creatorName}</p>
           </div>
+            <p class="creator">Creator: ${this.creatorName}</p>
         </div> 
         `
     }
-
-
 }
 customElements.define('badge-card', BadgeCard); 
