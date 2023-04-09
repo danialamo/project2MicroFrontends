@@ -11,20 +11,27 @@ export class SearchWidget extends LitElement {
 
   static get styles() {
     return css`
-    :host {
+    host:{
       display: block;
     }
     simple-icon {
       display: inline-block;
-      --simple-icon-height: 40px;
-      --simple-icon-width: 40px;
+      --simple-icon-height: 25px;
+      --simple-icon-width: 25px;
+    }
+    input{
+      border:none;
+      font-family: 'Montserrat', sans-serif;
+      width: 300px;
+      height: 45px;
+      background-color: #F7FAFC;
     }
     `;
   }
 
   constructor() {
     super();
-    this.value = '';
+    this.value = 'Search Content, Topics, and People';
   }
 
   render() {

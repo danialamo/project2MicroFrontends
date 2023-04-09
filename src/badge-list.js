@@ -70,6 +70,7 @@ export class BadgeList extends LitElement{
             border: 2px;
             border-radius: 5px;
             display: block; 
+            justify-content: center;
         }
         p{
             font-family: 'Montserrat', sans-serif;
@@ -96,6 +97,16 @@ export class BadgeList extends LitElement{
         .box2Text{
             padding-top: 15px;
         }
+
+        .searchbox{
+            background-color: #F7FAFC;
+            box-shadow: 3.5px 3.5px 3px rgba(0, 0, 0, 0.3);
+            width: 900px;
+            height: 50px;
+            margin-left: 40px;
+            padding-left: 30px; 
+
+        }
         `
     }
 
@@ -107,7 +118,9 @@ export class BadgeList extends LitElement{
         with a similar focus? Find them in Groups. Interested in viewing all the options
         within a certain subject area? You can do that in Topics. 
         </p>
+        <div class="searchbox">
         <search-widget @value-changed="${this._handleSearchEvent}"></search-widget>
+        </div>
       </section>
       <div class="box2">
         <div class="section_header">
