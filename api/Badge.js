@@ -49,6 +49,11 @@ export default async function handler(req, res) {
       
     ];
 
+    while(search == ''){
+      badges = badges.slice(0,4);
+      return badges; 
+    }
+
     badges.map((schoolBadges) => {
         schoolBadges.index = schoolBadges.fieldName.toLowerCase() + " " + schoolBadges.title.toLowerCase() + " " + schoolBadges.creatorName.toLowerCase();
       });
