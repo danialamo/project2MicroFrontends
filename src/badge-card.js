@@ -60,6 +60,7 @@ export class BadgeCard extends LitElement{
           
           .creator{
             padding-left: 4px;
+            padding-top: 45px;
           }
 
           h3{
@@ -79,7 +80,9 @@ export class BadgeCard extends LitElement{
           <div class="content">
             <h3>${this.title}</h3>
           </div>
-            <p class="creator">Creator: ${this.creatorName}</p>
+          <div class="creator">
+          <p>Creator: ${this.creatorName}</p>
+          </div>
         </div> 
         `
     }
