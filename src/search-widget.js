@@ -29,7 +29,7 @@ export class SearchWidget extends LitElement {
 
   render() {
     return html`
-      <input type="text" value="${this.value}" @input="${this._handleInput}"/>
+      <input type="text" @input="${this._handleInput}"/>
     `;
   }
   _handleInput(e) {
