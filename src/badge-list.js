@@ -58,19 +58,69 @@ export class BadgeList extends LitElement{
             height: 120px; 
             width: 250px;
         }
+        header{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 25px;
+        }
+        .box1{
+            margin-bottom: 20px;
+            width: 1010px;
+            height: 250px;
+            background-color: #F7FAFC;
+            border: 2px;
+            border-radius: 5px;
+            display: block; 
+        }
+        p{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 19px;
+            padding-top: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .box2{
+            width: 1010px;
+            height: 250px; 
+            background-color: #F7FAFC;
+            border: 2px;
+            border-radius: 5px;
+            display: block;
+            flex-direction: column;
+        }
+        hr.solid {
+           border-top: 0.5px solid #bbb;
+           width: 940px;
+           margin-top: 5px;
+        }
+        .box2Text{
+            padding-top: 10px;
+        }
         `
     }
 
     render(){
       return html`
-      <search-widget @value-changed="${this._handleSearchEvent}"></search-widget>
-      <div class= "wrapper">
-       ${this.schoolBadges.map(badges => html`
-       <div class="item">
-         <badge-card fieldName="${badges.fieldName}" title="${badges.title}" creatorName="${badges.creatorName}"></badge-card>
-       </div>
-       `)}
-      `
-    }
+      <section class="box1">
+        <p> Explore our content in a self-guided manner. Want us to guide you 
+        through learning new skills? Try out Missions. Looking for other people
+        with a similar focus? Find them in Groups. Interested in viewing all the options
+        within a certain subject area? You can do that in Topics. 
+        </p>
+        <search-widget @value-changed="${this._handleSearchEvent}"></search-widget>
+      </section>
+      <div class="box2">
+        <div class="section_header">
+          <p class="box2Text">Looking for something brand spaking new? Here are the most recently added badges </p>
+        </div>
+        <hr class="solid">
+        <div class= "wrapper">
+        ${this.schoolBadges.map(badges => html`
+        <div class="item">
+          <badge-card fieldName="${badges.fieldName}" title="${badges.title}" creatorName="${badges.creatorName}"></badge-card>
+        </div>
+        `)}
+      </div>
+      ` }
 }
 customElements.define(BadgeList.tag, BadgeList);
