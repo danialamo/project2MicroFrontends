@@ -48,6 +48,13 @@ export default async function handler(req, res) {
          }
       
     ];
+    if(search === ''){
+      badges = badges.slice(0,4);
+      badges.map((schoolBadges) => {
+        return schoolBadges;
+      });
+      
+    }else{ 
 
     badges.map((schoolBadges) => {
         schoolBadges.index = schoolBadges.fieldName.toLowerCase() + " " + schoolBadges.title.toLowerCase() + " " + schoolBadges.creatorName.toLowerCase();
@@ -55,6 +62,7 @@ export default async function handler(req, res) {
       badges = badges.filter((schoolBadges) => {
         return schoolBadges.index.indexOf(search.toLowerCase()) > -1;
       });
+    }
     console.log(badges);
     res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
     res.setHeader("Access-Control-Allow-Credentials", "true");
