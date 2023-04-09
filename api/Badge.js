@@ -1,4 +1,5 @@
 export default async function handler(req, res) {
+    const search = req.query.search || '';
     var badges = [
         {
             "fieldName" : "Technology & Information",
@@ -22,6 +23,12 @@ export default async function handler(req, res) {
          }
       
     ];
+    badges.map((schoolBadges) => {
+        schoolBadges.index = schoolBadges.fieldName.toLowerCase() + " " + schoolBadges.title.toLowerCase() + " " + schoolBadges.creatorName.toLowerCase();
+      });
+      badges = badges.filter((schoolBadges) => {
+        return schoolBadges.index.indexOf(search.toLowerCase()) > -1;
+      });
 
     console.log(badges);
     res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
