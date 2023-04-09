@@ -29,6 +29,7 @@ export class SearchWidget extends LitElement {
 
   render() {
     return html`
+     <simple-icon icon="icons:search"></simple-icon>
       <input type="text" value="${this.value}" @input="${this._handleInput}"/>
     `;
   }
