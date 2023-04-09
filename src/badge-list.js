@@ -21,8 +21,8 @@ export class BadgeList extends LitElement{
         });
     }
     async getSearchResults(value = '') {
-        const defaultList = '/api/Badge?defaultResults=true'
-        fetch('/items?defaultResults=true')
+        const defaultList = '/api/Badge?defaultResults=true'; 
+        fetch(defaultList) 
         .then(response => response.json())
         .then(data => {
             return data; 
