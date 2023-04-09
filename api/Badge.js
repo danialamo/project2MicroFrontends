@@ -1,4 +1,5 @@
 export default async function handler(req, res) {
+    const defaultResults = req.query.defaultResults; 
     const search = req.query.search || '';
     var badges = [
         {
@@ -20,16 +21,45 @@ export default async function handler(req, res) {
            "fieldName" : "Sof",
             "title" : "Savvy Searcher: Recognizing Bias",
             "creatorName" : "Victoria Raish"
+         },
+         {
+            "fieldName" : "JO",
+             "title" : "APA Style: Citations Introduction",
+             "creatorName" : "Victoria Raish"
+         },
+         {
+            "fieldName" : "Carla",
+             "title" : "Savvy Searcher: Recognizing Bias",
+             "creatorName" : "Victoria Raish"
+         },
+         {
+           "fieldName" : "Alina",
+            "title" : "Savvy Searcher: Recognizing Bias",
+            "creatorName" : "Victoria Raish"
+         }, 
+         {
+           "fieldName" : "Yvonne",
+            "title" : "Savvy Searcher: Recognizing Bias",
+            "creatorName" : "Victoria Raish"
+         },
+         {
+            "fieldName" : "Deanna",
+             "title" : "APA Style: Citations Introduction",
+             "creatorName" : "Victoria Raish"
          }
       
     ];
+    if(defaultResults){
+        badges = badges.slice(0,4);
+    }
+    else{
     badges.map((schoolBadges) => {
         schoolBadges.index = schoolBadges.fieldName.toLowerCase() + " " + schoolBadges.title.toLowerCase() + " " + schoolBadges.creatorName.toLowerCase();
       });
       badges = badges.filter((schoolBadges) => {
         return schoolBadges.index.indexOf(search.toLowerCase()) > -1;
       });
-
+    }
     console.log(badges);
     res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
     res.setHeader("Access-Control-Allow-Credentials", "true");

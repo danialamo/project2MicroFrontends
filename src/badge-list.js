@@ -21,6 +21,13 @@ export class BadgeList extends LitElement{
         });
     }
     async getSearchResults(value = '') {
+        const defaultList = '/api/Badge?defaultResults=true'
+        fetch('/items?defaultResults=true')
+        .then(response => response.json())
+        .then(data => {
+            return data; 
+        });
+
         const address = `/api/Badge?search=${value}`;
         const results = await fetch(address).then((response) => {
             if (response.ok) {
@@ -64,7 +71,7 @@ export class BadgeList extends LitElement{
         }
         .box1{
             margin-bottom: 20px;
-            width: 1010px;
+            width: 1030px;
             height: 250px;
             background-color: #F7FAFC;
             border: 2px;
@@ -74,13 +81,13 @@ export class BadgeList extends LitElement{
         p{
             font-family: 'Montserrat', sans-serif;
             font-size: 19px;
-            padding-top: 5px;
+            padding-top: 15px;
             padding-left: 20px;
             padding-right: 20px;
         }
         
         .box2{
-            width: 1010px;
+            width: 1030px;
             height: 250px; 
             background-color: #F7FAFC;
             border: 2px;
@@ -90,11 +97,11 @@ export class BadgeList extends LitElement{
         }
         hr.solid {
            border-top: 0.5px solid #bbb;
-           width: 940px;
+           width: 970px;
            margin-top: 5px;
         }
         .box2Text{
-            padding-top: 10px;
+            padding-top: 15px;
         }
         `
     }
