@@ -1,5 +1,4 @@
 export default async function handler(req, res) {
-    const defaultResults = req.query.defaultResults;
     const search = req.query.search || '';
     var badges = [
         {
@@ -50,10 +49,6 @@ export default async function handler(req, res) {
       
     ];
 
-    while(defaultResults){
-      badges = badges.slice(0,4);
-    }
-    
     badges.map((schoolBadges) => {
         schoolBadges.index = schoolBadges.fieldName.toLowerCase() + " " + schoolBadges.title.toLowerCase() + " " + schoolBadges.creatorName.toLowerCase();
       });
