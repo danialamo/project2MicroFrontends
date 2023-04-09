@@ -30,8 +30,7 @@
       background-color: #F7FAFC;
       border: 2px;
       border-radius: 5px;
-      display: flex;
-      flex-direction: column;
+      display: block; 
     }
     p{
       font-family: 'Montserrat', sans-serif;
@@ -43,7 +42,7 @@
   
     .box2{
       width: 1010px;
-      height: 250px;
+      height: 450px; 
       background-color: #F7FAFC;
       border: 2px;
       border-radius: 5px;
@@ -74,6 +73,7 @@
           with a similar focus? Find them in Groups. Interested in viewing all the options
           within a certain subject area? You can do that in Topics. 
         </p>
+        <search-widget></search-widget>
       </section>
       <div class="box2">
         <div class="section_header">
@@ -86,9 +86,10 @@
     <script type="module">
       import "./src/badge-card.js"; 
       import "./src/badge-list.js";
+      import "./src/search-widget.js"
     </script> 
 
-  </body>
+  </body>`
  
 
 </html>

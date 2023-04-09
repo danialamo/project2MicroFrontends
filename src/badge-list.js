@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit";
 import "./badge-card.js"; 
+import "./search-widget.js";
 
 export class BadgeList extends LitElement{
     static get tag(){
@@ -15,23 +16,31 @@ export class BadgeList extends LitElement{
     constructor(){
         super(); 
         this.schoolBadges = [];
-        this.updateBadges(); 
+        this.getSearchResults().then((results) => {
+            this.schoolBadges = results;
+        });
     }
-
-    updateBadges(){
-        const address = '../api/Badge'
-        const data =  fetch(address).then((response) => {
-            if(response.ok){
-                return response.json() 
+    async getSearchResults(value = '') {
+        const address = `/api/Badge?search=${value}`;
+        const results = await fetch(address).then((response) => {
+            if (response.ok) {
+                return response.json()
             }
             return [];
         })
         .then((data) => {
-            this.schoolBadges = data;
-        }); 
-        console.log(data); 
+            return data;
+        });
 
+        return results;
     }
+
+    async _handleSearchEvent(e) {
+        const term = e.detail.value;
+        this.schoolBadges = await this.getSearchResults(term);
+    }
+
+
 
     static get styles(){
         return css`
@@ -54,6 +63,7 @@ export class BadgeList extends LitElement{
 
     render(){
       return html`
+      <search-widget @value-changed="${this._handleSearchEvent}"></search-widget>
       <div class= "wrapper">
        ${this.schoolBadges.map(badges => html`
        <div class="item">
