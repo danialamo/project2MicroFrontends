@@ -2,22 +2,22 @@ export default async function handler(req, res) {
     const search = req.query.search || '';
     var badges = [
         {
-            "fieldName" : "Technology & Information",
+            "fieldName" : "Dani",
              "title" : "APA Style: Citations Introduction",
              "creatorName" : "Victoria Raish"
          },
          {
-            "fieldName" : "Technology & Information",
+            "fieldName" : "Lex",
              "title" : "Savvy Searcher: Recognizing Bias",
              "creatorName" : "Victoria Raish"
          },
          {
-           "fieldName" : "Technology & Information",
+           "fieldName" : "Karly",
             "title" : "Savvy Searcher: Recognizing Bias",
             "creatorName" : "Victoria Raish"
          }, 
          {
-           "fieldName" : "Technology & Information",
+           "fieldName" : "Sof",
             "title" : "Savvy Searcher: Recognizing Bias",
             "creatorName" : "Victoria Raish"
          }
