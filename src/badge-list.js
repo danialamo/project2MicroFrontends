@@ -107,6 +107,11 @@ export class BadgeList extends LitElement{
             padding-left: 30px; 
 
         }
+        .sectiontxt{
+            display: flex;
+            
+
+        }
         `
     }
 
@@ -120,6 +125,14 @@ export class BadgeList extends LitElement{
         </p>
         <div class="searchbox">
         <search-widget @value-changed="${this._handleSearchEvent}"></search-widget>
+        </div>
+        <div class="sectiontxt">
+          <h5>ALL</h5>
+          <h5>Missions</h5>
+          <h5>Groups</h5>
+          <h5>Badges</h5>
+          <h5>People</h5>
+          
         </div>
       </section>
       <div class="box2">

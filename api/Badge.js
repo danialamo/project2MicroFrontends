@@ -2,49 +2,49 @@ export default async function handler(req, res) {
     const search = req.query.search || '';
     var badges = [
         {
-            "fieldName" : "Dani",
+            "fieldName" : "Technology & Information",
              "title" : "APA Style: Citations Introduction",
              "creatorName" : "Victoria Raish"
          },
          {
-            "fieldName" : "Lex",
-             "title" : "Savvy Searcher: Recognizing Bias",
-             "creatorName" : "Victoria Raish"
+            "fieldName" : "Professional Skills",
+             "title" : "IST Careers - Meet a Coach",
+             "creatorName" : "Rita Griffth"
          },
          {
-           "fieldName" : "Karly",
-            "title" : "Savvy Searcher: Recognizing Bias",
-            "creatorName" : "Victoria Raish"
+           "fieldName" : "Agriculture & Natural Resources",
+            "title" : "Treat Yourself",
+            "creatorName" : "Allain Diagle"
          }, 
          {
-           "fieldName" : "Sof",
+           "fieldName" : "Technology & Information",
             "title" : "Savvy Searcher: Recognizing Bias",
-            "creatorName" : "Victoria Raish"
+            "creatorName" : "Emily Rimland"
          },
          {
-            "fieldName" : "JO",
-             "title" : "APA Style: Citations Introduction",
-             "creatorName" : "Victoria Raish"
+            "fieldName" : "Professional Skills",
+             "title" : "Leadership and Teamwork",
+             "creatorName" : "Dani Alamo"
          },
          {
-            "fieldName" : "Carla",
-             "title" : "Savvy Searcher: Recognizing Bias",
-             "creatorName" : "Victoria Raish"
+            "fieldName" : "Business",
+             "title" : "Trend Forecasting",
+             "creatorName" : "Alexandra Nielsen"
          },
          {
-           "fieldName" : "Alina",
-            "title" : "Savvy Searcher: Recognizing Bias",
-            "creatorName" : "Victoria Raish"
+           "fieldName" : "Communications",
+            "title" : "Public Speaking",
+            "creatorName" : "Alina Lebedeva"
          }, 
          {
-           "fieldName" : "Yvonne",
-            "title" : "Savvy Searcher: Recognizing Bias",
-            "creatorName" : "Victoria Raish"
+           "fieldName" : "Agriculture & Natural Resources",
+            "title" : "Earth and Space",
+            "creatorName" : "Karly Freidland"
          },
          {
-            "fieldName" : "Deanna",
-             "title" : "APA Style: Citations Introduction",
-             "creatorName" : "Victoria Raish"
+            "fieldName" : "Professional Skills",
+             "title" : "Internships and Interviews",
+             "creatorName" : "Deanna Lasorda"
          }
       
     ];
