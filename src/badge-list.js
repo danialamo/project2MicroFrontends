@@ -65,7 +65,7 @@ export class BadgeList extends LitElement{
         }
         .box1{
             margin-bottom: 20px;
-            width: 1030px;
+            width: 1020px;
             height: 250px;
             background-color: #F7FAFC;
             border: 2px;
@@ -82,7 +82,7 @@ export class BadgeList extends LitElement{
         }
         
         .box2{
-            width: 1030px;
+            width: 1020px;
             height: 250px; 
             background-color: #F7FAFC;
             border: 2px;
