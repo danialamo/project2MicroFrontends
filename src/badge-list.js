@@ -51,6 +51,7 @@ export class BadgeList extends LitElement{
             height: 200px;
             justify-content: space-between; 
             padding-left: 10px; 
+            overflow-x: hidden;
 
         }
         .item{
